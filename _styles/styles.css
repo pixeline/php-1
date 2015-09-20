@@ -1,0 +1,121 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "avenir", helvetica, sans-serif;
+}
+
+body {
+    background: #F3F3F3;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+main p {
+    color: grey;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 1em; 
+}
+
+.left {
+    width: 50%;
+    float: left;  
+}
+
+.right {
+    position: fixed;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: url(../_images/stars.svg) fixed no-repeat;
+    background-size: cover;
+}
+
+
+form {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+fieldset {
+    border: none;
+    margin: 1.5em 0;
+}
+
+legend {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+footer {
+    text-align: center;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+
+.reponse p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 50px;
+    
+}
+.reponse img {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 25%; 
+}
+#bus {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-top: 30%; 
+}
+
+.submit {
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #000;
+    color: #000;
+    background: #F3F3F3;
+    text-transform: uppercase;
+    padding: 0 10px;
+    transition: border .5s, color .5s;
+    outline: none;
+}
+
+.submit:hover {
+    border: 1px solid #EBB916;
+    color: #EBB916;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color .5s;
+}
+
+a:hover {
+    color: #EBB916;
+}
