@@ -143,7 +143,7 @@
         </main>
         
         <footer>
-            <p>Réalisé par Victor Grégoire - <a href="">Github</a></p>
+            <p>Réalisé par Victor Grégoire - <a href="https://github.com/victorzaure/php">Github</a></p>
         </footer>
 
 
