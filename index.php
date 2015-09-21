@@ -1,4 +1,32 @@
- <!DOCTYPE html>
+<?php
+// Transforme la value en booleenne
+function boolean($argument){ 
+	return $argument = $argument == 'true' ? true : false;
+}
+
+if(isset($_GET['submit'])){
+	$q1 = boolean($_GET['q1']);
+	$q2 = boolean($_GET['q2']);
+	$q3 = boolean($_GET['q3']);
+	$q4 = boolean($_GET['q4']);
+	$q5 = boolean($_GET['q5']);
+	$q6 = boolean($_GET['q6']);
+
+	if ($q1 == true && $q2 == false && $q3 == true && $q4 == true && $q5 == false && $q6 == true){
+		$resultat = '<div class="reponse"><img src="_images/porsche.svg"/><p>&quot;Prend la Porsche mon fils&quot;</p></div>';
+	} else {
+		if ($q2 == true || $qu5 == true){
+			$resultat =  "<div class='reponse'><img id='bus' src='_images/bus.svg'/><p>&quot;Prend le bus cher enfant&quot;<p></div>";
+		}else{
+			if ($q1 == true && $q2 == false && $q3 == true && $q4 == false && $q5 == false && $q6 == true){
+				$resultat =  "<div class='reponse'><img src='_images/porsche.svg'/><p>&quot;Prend la Porsche mon fils, mais tu iras faire le plein&quot;</p></div>";
+			} else {
+				$resultat =  "<div class='reponse'><img src='_images/bmw.svg'/><p>&quot;D'accord, mais tu prends la BMW et pas la Porsche&quot;<p></div>";
+			}
+		}
+	}
+}
+?><!DOCTYPE html>
 <html lang="fr">
 	<head>
 
@@ -105,36 +133,7 @@
            <div class="right">
                
                <?php 
-
-                    if(isset($_GET['submit'])){
-
-                        // Transforme la value en booleenne
-                        function boolean($argument){ return $argument = $argument == 'true' ? true : false;};
-
-                        $q1 = boolean($_GET['q1']);
-                        $q2 = boolean($_GET['q2']);
-                        $q3 = boolean($_GET['q3']);
-                        $q4 = boolean($_GET['q4']);
-                        $q5 = boolean($_GET['q5']);
-                        $q6 = boolean($_GET['q6']);
-
-
-                        if ($q1 == true && $q2 == false && $q3 == true && $q4 == true && $q5 == false && $q6 == true){
-                            echo "<div class='reponse'><img src='_images/porsche.svg'/><p>&quot;Prend la Porsche mon fils&quot;</p></div>";
-                         } else {
-                            if ($q2 == true || $qu5 == true){
-                                echo "<div class='reponse'><img id='bus' src='_images/bus.svg'/><p>&quot;Prend le bus cher enfant&quot;<p></div>";
-                            }else{
-                                if ($q1 == true && $q2 == false && $q3 == true && $q4 == false && $q5 == false && $q6 == true){
-                                    echo "<div class='reponse'><img src='_images/porsche.svg'/><p>&quot;Prend la Porsche mon fils, mais tu iras faire le plein&quot;</p></div>";
-                                } else {
-                                    echo "<div class='reponse'><img src='_images/bmw.svg'/><p>&quot;D'accord, mais tu prends la BMW et pas la Porsche&quot;<p></div>";
-                                }
-                                
-                            }
-                        }
-                    }
-
+               echo (isset($resultat)) ? $resultat : '';
                 ?>
                
            </div>
